@@ -1,0 +1,107 @@
+.emoji {
+    width: 24vw;
+    /* background-color: #FF8661; */
+    height: 24vw;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.full-emoji-page{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.emoji-container {
+    display: flex;
+    flex-direction: column;
+    height: 74vh;
+    flex-wrap: wrap;
+}
+
+.emoji-text{
+    height: 14vw;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 20vw;
+    margin-left: 2vw;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.emoji-image{
+    height: 14vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 7vw;
+}
+
+.emoji-width-container{
+    width: 90vw;
+    overflow-x: scroll;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+
+.emoji{
+    /* margin: 2.67vw; */
+    margin-left: 2.67vw;
+    margin-right: 2.67vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.back-btn{
+    position: fixed;
+    top: 2vh;
+    /* width: 5vw; */
+    left: 5vw;
+}
+
+.black-container{
+    display: flex;
+    background-color: black;
+    width: 80vw;
+    position: fixed;
+    bottom: 2vh;
+    left: 10vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    border-radius: 12vw;
+}
+
+.back {
+    width: 8vw;
+}
+
+.black-text{
+    color: white;
+    font-size: 4vw;
+    width: 46vw;
+    margin-left: 8vw;
+    margin-right: 6vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'barlow-light';
+}
+
+.arrow-div{
+    width: 17vw;
+    height: 17vw;
+    background-color: #2E2E2E;
+    border-radius: 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arrow{
+    width: 9vw;
+    margin-left: 4vw;
+}

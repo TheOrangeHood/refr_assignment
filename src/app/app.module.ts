@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmojiPageComponent } from './emoji-page/emoji-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmojiPageComponent
   ],
   imports: [
     BrowserModule,

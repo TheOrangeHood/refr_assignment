@@ -1,0 +1,32 @@
+<!-- <p>emoji-page works!</p> -->
+<div class="full-emoji-page">
+    <div class="back-btn">
+        <img src="../../assets/media/arrow-left.png" alt="" class="back">
+    </div>
+    <div class="emoji-width-container">
+        <div class="emoji-container">
+            <div class="emoji" [ngStyle]="{'background-color':emoji.color}" *ngFor="let emoji of emoji_list"
+                (click)="addOrRemove(emoji)">
+                <div class="emoji-text">
+                    {{emoji.text}}
+                </div>
+                <div class="emoji-image">
+                    {{emoji.url}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="black-container">
+        <div class="black-text" *ngIf="selected_emoji_list.length == 0">Tap the emotion that best describe how you feel
+            right now</div>
+        <div class="black-text" *ngIf="selected_emoji_list.length != 0">
+            <div class="flex">
+                <!-- <span *ngFor="let emoji of selected_emoji_list">{{emoji.text}}</span> -->
+                {{black_text}}
+            </div>
+        </div>
+        <div class="arrow-div">
+            <img src="../../assets/media/arrow-right.png" alt="" class="arrow">
+        </div>
+    </div>
+</div>
