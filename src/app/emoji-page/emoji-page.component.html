@@ -5,7 +5,7 @@
     </div>
     <div class="emoji-width-container">
         <div class="emoji-container">
-            <div class="emoji" [ngStyle]="{'background-color':emoji.color}" *ngFor="let emoji of emoji_list"
+            <div class="emoji" [ngStyle]="{'background-color':emoji.color}" *ngFor="let emoji of emoji_list" [id]="emoji.id"
                 (click)="addOrRemove(emoji)">
                 <div class="emoji-text">
                     {{emoji.text}}
@@ -23,6 +23,7 @@
             <div class="flex">
                 <!-- <span *ngFor="let emoji of selected_emoji_list">{{emoji.text}}</span> -->
                 {{black_text}}
+                <div class="remaining-text" *ngIf="selected_emoji_list.length!=3" style="font-size: 3.3vw;">select {{3 - selected_emoji_list.length}} more!</div>
             </div>
         </div>
         <div class="arrow-div">

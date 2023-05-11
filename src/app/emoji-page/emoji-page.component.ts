@@ -184,25 +184,31 @@ export class EmojiPageComponent implements OnInit {
     if (index != -1) {
       this.selected_emoji_list.splice(index, 1)
       console.log(this.selected_emoji_list)
+      var s_emoji = document.getElementById(emoji.id.toString()) as HTMLDivElement
+      s_emoji.classList.remove('selected')
       this.calculate_black_text()
     }
-    else{
-      this.selected_emoji_list.push(emoji)
-      console.log(this.selected_emoji_list)
-      this.calculate_black_text()
+    else {
+      if (this.selected_emoji_list.length < 3) {
+        this.selected_emoji_list.push(emoji)
+        console.log(this.selected_emoji_list)
+        var s_emoji = document.getElementById(emoji.id.toString()) as HTMLDivElement
+        s_emoji.classList.add('selected')
+        this.calculate_black_text()
+      }
     }
   }
 
   calculate_black_text = () => {
     for (let index = 0; index < this.selected_emoji_list.length; index++) {
       const element = this.selected_emoji_list[index];
-      if(index==0){
+      if (index == 0) {
         this.black_text = this.selected_emoji_list[0].text;
       }
-      else{
+      else {
         this.black_text = this.black_text + ', ' + this.selected_emoji_list[index].text
       }
     }
-  } 
+  }
 
 }
